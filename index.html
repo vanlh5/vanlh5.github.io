@@ -3,6 +3,49 @@
   <head>
    <title>Test123456</title>
   </head>
-  <body>    
+  <body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+      <h1 class="text-2xl font-bold mb-8 text-center md:text-3xl">
+        Danh sách câu hỏi
+      </h1>
+      <i
+        id="toggleThemeButton"
+        class="fas fa-sun absolute right-4 top-10 text-2xl md:top-4"
+        style="cursor: pointer"
+      ></i>
+      <button
+        id="scrollTopButton"
+        class="fixed bottom-2 right-2 bg-blue-500 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-600 focus:outline-none focus:bg-blue-600 hidden"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <div class="relative">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Tìm theo câu hỏi hoặc giải thích"
+          class="w-full mb-4 px-4 py-2 rounded-md border-gray-300 font-semibold border-2 border-black focus:outline-none focus:ring-red-500 focus:border-red-300"
+        />
+        <button
+          id="clearButton"
+          class="absolute hidden right-4 top-2.5 focus:outline-none"
+        >
+          <i class="fas fa-times text-2xl text-gray-400"></i>
+        </button>
+      </div>
+      <div
+        id="searchResults"
+        class="hidden mt-4 text-center text-4xl text-black font-semibold"
+      >
+        Không tìm thấy câu hỏi hoặc câu trả lời
+      </div>
+      <div
+        id="questions"
+        class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3"
+      ></div>
+    </div>
+
+    <!-- Script to fetch and display questions -->
+    <script src="script.js"></script>
   </body>
 </html>
